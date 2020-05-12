@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from "react";
+import ProductListItem from "./ProductListItem";
+import {Filter} from "./Filter";
 
-export function ProductsList() {
+export function ProductsList(props) {
     const [products, setProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
     const fetchItems = async () => {
         const data = await fetch('http://localhost:8000/products');
@@ -9,6 +12,7 @@ export function ProductsList() {
         console.log(response);
 
         setProducts(response);
+        setFilteredProducts(response);
     };
 
     useEffect(() => {
@@ -19,14 +23,8 @@ export function ProductsList() {
 
     return (
         <div>
-            {products.map(product => (
-                <div>
-                    <h3 key={product.id}>{product.title}</h3>
-                </div>
-            ))}
-            <div>
-                <h1></h1>
-            </div>
+            <Filter count={filteredProducts.length}/>
+            <ProductListItem products={filteredProducts} />
         </div>
     )
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
@@ -7,17 +6,17 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 export const Navbar = () => {
     return (
         <nav className='nav'>
-            <Link to='/'>Logo</Link>
+            Logo
             <ul className='nav-link'>
                 <li>
-                    <Link to='/'>Shop</Link>
+                    Shop
                 </li>
                 <li>
-                    <Link to='/cart'>My Cart</Link>
+                    My Cart
                 </li>
                 <li>
-                    <Link to=''>
-                        <FontAwesomeIcon icon={faShoppingCart} /></Link>
+
+                        <FontAwesomeIcon icon={faShoppingCart} />
                 </li>
             </ul>
         </nav>
