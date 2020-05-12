@@ -15,11 +15,18 @@ export function ProductsList() {
         fetchItems();
     }, []);
 
+    // const {id, title, sku, availableSizes, price} = products;
+
     return (
         <div>
             {products.map(product => (
-                <h3 key={product.id}>{product.title}</h3>
+                <div>
+                    <h3 key={product.id}>{product.title}</h3>
+                </div>
             ))}
+            <div>
+                <h1></h1>
+            </div>
         </div>
     )
 }
