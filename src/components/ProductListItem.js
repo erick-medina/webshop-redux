@@ -2,6 +2,7 @@ import React from "react";
 import util from './../util';
 
 function ProductListItem(props) {
+
     return (
         <div>
             {props.products.map(product =>

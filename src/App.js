@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import {ProductsList} from "./components/ProductsList";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {Navbar} from "./components/Navbar";
+import ProductsList from "./components/ProductsList";
 
 function App() {
     return (
         <div className="App">
             <Navbar/>
-            <ProductsList/>
+            <ProductsList />
         </div>
     );
 }

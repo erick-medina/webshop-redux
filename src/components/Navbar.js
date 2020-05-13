@@ -15,7 +15,6 @@ export const Navbar = () => {
                     My Cart
                 </li>
                 <li>
-
                         <FontAwesomeIcon icon={faShoppingCart} />
                 </li>
             </ul>
